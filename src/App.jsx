@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Code2,
   BrainCircuit,
@@ -15,15 +14,9 @@ import {
   ShoppingCart,
   TrendingUp,
   ArrowRight,
-  Menu,
-  X,
 } from "lucide-react";
 
-import "./App.css";
-
 export default function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   const services = [
     {
       icon: <Code2 size={34} />,
@@ -62,50 +55,39 @@ export default function App() {
 
   return (
     <div className="app">
-      {/* NAVBAR */}
       <header className="navbar">
         <div className="logo-box">
           <img src="/Logo.png" alt="Logo" className="logo" />
+
           <h2>
             <span>WEBIFY</span> DIGITAL SOLUTIONS
           </h2>
         </div>
 
-        <nav className={menuOpen ? "nav active" : "nav"}>
+        <nav className="nav">
           <a href="#home">Home</a>
           <a href="#services">Services</a>
           <a href="#industries">Industries</a>
           <a href="/contact.html">Contact</a>
         </nav>
 
-        <a href="/contact.html" className="btn primary desktop-btn">
+        <a href="/contact.html" className="btn primary">
           Get Started
         </a>
-
-        <button
-          className="menu-btn"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <X /> : <Menu />}
-        </button>
       </header>
 
-      {/* HERO */}
       <section className="hero" id="home">
         <div className="hero-left">
-          <div className="tag">
-            ENTERPRISE TECHNOLOGY COMPANY
-          </div>
+          <div className="tag">ENTERPRISE TECHNOLOGY COMPANY</div>
 
           <h1>
-            Empowering <br />
-            Industries Through <br />
-            <span>Digital Transformation</span>
+            Empowering Industries Through
+            <span> Digital Transformation</span>
           </h1>
 
           <p>
             We deliver enterprise software, AI-powered platforms,
-            cloud systems, mobile applications, and digital
+            cloud systems, mobile applications and digital
             transformation services that drive growth and efficiency.
           </p>
 
@@ -144,14 +126,14 @@ export default function App() {
             </div>
 
             <div className="ai-box">
-              AI + Enterprise <br />
+              AI + Enterprise
+              <br />
               Solutions
             </div>
           </div>
         </div>
       </section>
 
-      {/* SERVICES */}
       <section className="services" id="services">
         <div className="section-head">
           <p>OUR SERVICES</p>
@@ -162,16 +144,13 @@ export default function App() {
           {services.map((item, index) => (
             <div className="service-card" key={index}>
               <div className="service-icon">{item.icon}</div>
-
               <h3>{item.title}</h3>
-
               <p>{item.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* INDUSTRIES */}
       <section className="industries" id="industries">
         <div className="section-head">
           <p>INDUSTRIES</p>
@@ -188,17 +167,16 @@ export default function App() {
         </div>
       </section>
 
-      {/* CONTACT CTA */}
       <section className="contact-cta">
         <div className="cta-box">
           <p>CONTACT US</p>
 
-          <h2>Let’s Build Something Amazing</h2>
+          <h2>Let's Build Something Amazing</h2>
 
           <p className="cta-text">
-            Contact Webify Digital Solutions for enterprise
-            software, AI systems, mobile applications, cloud
-            infrastructure and digital transformation services.
+            Contact Webify Digital Solutions for enterprise software,
+            AI systems, mobile apps, cloud infrastructure and digital
+            transformation services.
           </p>
 
           <div className="cta-buttons">
@@ -216,18 +194,10 @@ export default function App() {
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer className="footer">
         <p>
           © 2026 WEBIFY DIGITAL SOLUTIONS. All Rights Reserved.
         </p>
-
-        <div className="socials">
-          <span>f</span>
-          <span>in</span>
-          <span>x</span>
-          <span>ig</span>
-        </div>
       </footer>
     </div>
   );
