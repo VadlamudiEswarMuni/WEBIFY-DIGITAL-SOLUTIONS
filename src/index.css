@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GLOBAL */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  font-family:'Poppins',sans-serif;
+
+  background:#000000;
+
+  color:#ffffff;
+
+  overflow-x:hidden;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-track{
+  background:#0F172A;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#2563EB;
+  border-radius:20px;
+}
+
+/* TEXT SELECTION */
+
+::selection{
+  background:#2563EB;
+  color:white;
+}
+
+/* REUSABLE CLASSES */
+
+.section-padding{
+  padding:100px 20px;
+}
+
+.container-custom{
+  max-width:1280px;
+  margin:auto;
+}
+
+.glass-card{
+
+  background:rgba(255,255,255,0.05);
+
+  backdrop-filter:blur(12px);
+
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.blue-gradient{
+
+  background:linear-gradient(
+    135deg,
+    #2563EB,
+    #1E40AF
+  );
+}
+
+.text-gradient{
+
+  background:linear-gradient(
+    to right,
+    #60A5FA,
+    #2563EB
+  );
+
+  -webkit-background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+}
+
+/* HERO GLOW */
+
+.hero-glow{
+
+  position:absolute;
+
+  width:400px;
+
+  height:400px;
+
+  background:#2563EB;
+
+  filter:blur(180px);
+
+  opacity:0.25;
+
+  border-radius:50%;
+
+  z-index:-1;
+}
+
+/* BUTTONS */
+
+.btn-primary{
+
+  background:#2563EB;
+
+  color:white;
+
+  padding:14px 32px;
+
+  border-radius:16px;
+
+  font-weight:600;
+
+  transition:0.3s;
+}
+
+.btn-primary:hover{
+
+  background:#1D4ED8;
+
+  transform:translateY(-2px);
+}
+
+.btn-outline{
+
+  border:1px solid #334155;
+
+  color:white;
+
+  padding:14px 32px;
+
+  border-radius:16px;
+
+  font-weight:600;
+
+  transition:0.3s;
+}
+
+.btn-outline:hover{
+
+  border-color:#2563EB;
+
+  color:#60A5FA;
+}
+
+/* CARD EFFECT */
+
+.card-hover{
+  transition:0.4s;
+}
+
+.card-hover:hover{
+
+  transform:translateY(-8px);
+
+  border-color:#2563EB;
+}
+
+/* FLOATING ANIMATION */
+
+.floating{
+  animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-12px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .section-padding{
+    padding:70px 16px;
+  }
+
+}
