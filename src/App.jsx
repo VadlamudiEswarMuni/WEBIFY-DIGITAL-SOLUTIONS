@@ -29,12 +29,13 @@ function App() {
           </h2>
         </div>
 
-        <div className="nav-links">
-          <a href="#">Home</a>
-          <a href="#services">Services</a>
-          <a href="#industries">Industries</a>
-          <a href="/contact.html">Contact</a>
-        </div>
+<nav className="nav-links">
+  <a href="#home">Home</a>
+  <a href="#about">About Us</a>
+  <a href="#services">Services</a>
+  <a href="#industries">Industries</a>
+  <a href="#contact">Contact</a>
+</nav>
 
         <a href="/contact.html" className="nav-btn">
           Get Started
