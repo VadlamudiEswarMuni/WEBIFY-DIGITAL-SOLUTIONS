@@ -1,122 +1,227 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div className="app">
+
+      {/* NAVBAR */}
+      <header className="navbar">
+        <div className="logo">
+          <img
+            src="https://i.imgur.com/7b1H6tB.png"
+            alt="logo"
+          />
+          <h2>WEBIFY DIGITAL SOLUTIONS</h2>
         </div>
-        <div>
-          <h1>Get started</h1>
+
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#industries">Industries</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button className="nav-btn">Get Started</button>
+      </header>
+
+      {/* HERO */}
+      <section className="hero" id="home">
+
+        <div className="hero-left">
+
+          <div className="tag">
+            ENTERPRISE TECHNOLOGY COMPANY
+          </div>
+
+          <h1>
+            Empowering Industries Through
+            <span> Digital Transformation</span>
+          </h1>
+
           <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+            We deliver enterprise software, AI-powered platforms,
+            cloud systems, mobile applications and digital
+            transformation services that drive business growth.
           </p>
+
+          <div className="hero-tags">
+            <span>📱 Mobile Apps</span>
+            <span>💻 Laptop Software</span>
+            <span>🖥 Tablet Solutions</span>
+          </div>
+
+          <div className="hero-buttons">
+            <button className="primary-btn">
+              Get Free Consultation
+            </button>
+
+            <button className="secondary-btn">
+              Explore Services →
+            </button>
+          </div>
+
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
+
+        <div className="hero-right">
+
+          <div className="hero-card">
+
+            <img
+              src="https://i.imgur.com/7b1H6tB.png"
+              alt="webify"
+            />
+
+            <div className="stats">
+
+              <div className="stat-box cyan">
+                <h2>50+</h2>
+                <p>Projects</p>
+              </div>
+
+              <div className="stat-box pink">
+                <h2>10+</h2>
+                <p>Industries</p>
+              </div>
+
+            </div>
+
+            <div className="solution-box">
+              AI + Enterprise Solutions
+            </div>
+
+          </div>
+
+        </div>
+
       </section>
 
-      <div className="ticks"></div>
+      {/* SERVICES */}
+      <section className="services" id="services">
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
+        <div className="section-title">
+          <p>OUR SERVICES</p>
+          <h2>Enterprise Solutions Built for Growth</h2>
         </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+
+        <div className="service-grid">
+
+          <div className="service-card">
+            <h3>Enterprise Software</h3>
+            <p>
+              ERP systems, CRM platforms, POS systems,
+              inventory management and automation.
+            </p>
+          </div>
+
+          <div className="service-card">
+            <h3>AI & Automation</h3>
+            <p>
+              AI chatbots, analytics, workflows and
+              enterprise automation systems.
+            </p>
+          </div>
+
+          <div className="service-card">
+            <h3>Web & Mobile Apps</h3>
+            <p>
+              Modern websites, Android apps,
+              iOS apps and SaaS platforms.
+            </p>
+          </div>
+
+          <div className="service-card">
+            <h3>Cloud Infrastructure</h3>
+            <p>
+              AWS deployment, DevOps solutions and
+              scalable cloud management.
+            </p>
+          </div>
+
         </div>
+
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      {/* INDUSTRIES */}
+      <section className="industries" id="industries">
+
+        <div className="section-title">
+          <p>INDUSTRIES</p>
+          <h2>Industries We Serve</h2>
+        </div>
+
+        <div className="industry-grid">
+
+          <div className="industry-card">🏨 Hospitality</div>
+          <div className="industry-card">❤️ Healthcare</div>
+          <div className="industry-card">🛍 Retail & Fashion</div>
+          <div className="industry-card">⛽ Oil & Gas</div>
+          <div className="industry-card">🏦 Banking & Finance</div>
+          <div className="industry-card">📡 Telecommunications</div>
+          <div className="industry-card">🏢 Real Estate</div>
+          <div className="industry-card">🚚 Supply Chain & Logistics</div>
+          <div className="industry-card">🛒 E-Commerce</div>
+
+        </div>
+
+      </section>
+
+      {/* CONTACT */}
+      <section className="contact" id="contact">
+
+        <div className="contact-box">
+
+          <p>CONTACT US</p>
+
+          <h2>Let’s Build Something Amazing</h2>
+
+          <span>
+            Contact Webify Digital Solutions for enterprise software,
+            AI systems, mobile apps and digital transformation services.
+          </span>
+
+          <form
+            action="https://formsubmit.co/webifydigitalsolutions.com@gmail.com"
+            method="POST"
+          >
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+            ></textarea>
+
+            <button type="submit">
+              Send Message
+            </button>
+
+          </form>
+
+        </div>
+
+      </section>
+
+      {/* FOOTER */}
+      <footer>
+        © 2026 WEBIFY DIGITAL SOLUTIONS. All Rights Reserved.
+      </footer>
+
+    </div>
+  );
 }
 
-export default App
+export default App;
