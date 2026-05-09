@@ -1,79 +1,138 @@
+import { useState } from "react";
+import {
+  Code2,
+  BrainCircuit,
+  Smartphone,
+  Cloud,
+  Building2,
+  HeartPulse,
+  ShoppingBag,
+  Fuel,
+  Landmark,
+  RadioTower,
+  Building,
+  Truck,
+  ShoppingCart,
+  TrendingUp,
+  ArrowRight,
+  Menu,
+  X,
+} from "lucide-react";
+
 import "./App.css";
 
-function App() {
+export default function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const services = [
+    {
+      icon: <Code2 size={34} />,
+      title: "Enterprise Software",
+      desc: "ERP systems, CRM platforms, POS systems, inventory management and business automation.",
+    },
+    {
+      icon: <BrainCircuit size={34} />,
+      title: "AI & Automation",
+      desc: "AI chatbots, intelligent analytics, automation workflows and enterprise AI systems.",
+    },
+    {
+      icon: <Smartphone size={34} />,
+      title: "Web & Mobile Apps",
+      desc: "Modern websites, Android apps, iOS applications and scalable SaaS platforms.",
+    },
+    {
+      icon: <Cloud size={34} />,
+      title: "Cloud Infrastructure",
+      desc: "AWS deployment, DevOps solutions, cloud management and scalable cloud systems.",
+    },
+  ];
+
+  const industries = [
+    { icon: <Building2 size={22} />, name: "Hospitality" },
+    { icon: <HeartPulse size={22} />, name: "Healthcare" },
+    { icon: <ShoppingBag size={22} />, name: "Retail & Fashion" },
+    { icon: <Fuel size={22} />, name: "Oil & Gas" },
+    { icon: <TrendingUp size={22} />, name: "Commodity Trading" },
+    { icon: <Landmark size={22} />, name: "Banking & Finance" },
+    { icon: <RadioTower size={22} />, name: "Telecommunications" },
+    { icon: <Building size={22} />, name: "Real Estate" },
+    { icon: <Truck size={22} />, name: "Supply Chain & Logistics" },
+    { icon: <ShoppingCart size={22} />, name: "E-Commerce" },
+  ];
+
   return (
     <div className="app">
-
       {/* NAVBAR */}
       <header className="navbar">
-        <div className="logo">
-           <img
-            src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
-            alt="logo"
-          />
-          <h2>WEBIFY DIGITAL SOLUTIONS</h2>
+        <div className="logo-box">
+          <img src="/Logo.png" alt="Logo" className="logo" />
+          <h2>
+            <span>WEBIFY</span> DIGITAL SOLUTIONS
+          </h2>
         </div>
 
-        <nav>
+        <nav className={menuOpen ? "nav active" : "nav"}>
           <a href="#home">Home</a>
           <a href="#services">Services</a>
           <a href="#industries">Industries</a>
-          <a href="#contact">Contact</a>
+          <a href="/contact.html">Contact</a>
         </nav>
 
-        <button className="nav-btn">Get Started</button>
+        <a href="/contact.html" className="btn primary desktop-btn">
+          Get Started
+        </a>
+
+        <button
+          className="menu-btn"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <X /> : <Menu />}
+        </button>
       </header>
 
       {/* HERO */}
       <section className="hero" id="home">
-
         <div className="hero-left">
-
           <div className="tag">
             ENTERPRISE TECHNOLOGY COMPANY
           </div>
 
           <h1>
-            Empowering Industries Through
-            <span> Digital Transformation</span>
+            Empowering <br />
+            Industries Through <br />
+            <span>Digital Transformation</span>
           </h1>
 
           <p>
             We deliver enterprise software, AI-powered platforms,
-            cloud systems, mobile applications and digital
-            transformation services that drive business growth.
+            cloud systems, mobile applications, and digital
+            transformation services that drive growth and efficiency.
           </p>
 
-          <div className="hero-tags">
+          <div className="mini-tags">
             <span>📱 Mobile Apps</span>
             <span>💻 Laptop Software</span>
-            <span>🖥 Tablet Solutions</span>
+            <span>🖥️ Tablet Solutions</span>
           </div>
 
           <div className="hero-buttons">
-            <button className="primary-btn">
+            <a href="/contact.html" className="btn primary">
               Get Free Consultation
-            </button>
+            </a>
 
-            <button className="secondary-btn">
-              Explore Services →
-            </button>
+            <a href="#services" className="btn secondary">
+              Explore Services
+              <ArrowRight size={18} />
+            </a>
           </div>
-
         </div>
 
         <div className="hero-right">
-
           <div className="hero-card">
-
-            <img
-              src="https://i.imgur.com/7b1H6tB.png"
-              alt="webify"
-            />
+            <img src="/Logo.png" alt="Logo" className="hero-logo" />
 
             <div className="stats">
-
-              <div className="stat-box cyan">
+              <div className="stat-box">
                 <h2>50+</h2>
                 <p>Projects</p>
               </div>
@@ -82,146 +141,94 @@ function App() {
                 <h2>10+</h2>
                 <p>Industries</p>
               </div>
-
             </div>
 
-            <div className="solution-box">
-              AI + Enterprise Solutions
+            <div className="ai-box">
+              AI + Enterprise <br />
+              Solutions
             </div>
-
           </div>
-
         </div>
-
       </section>
 
       {/* SERVICES */}
       <section className="services" id="services">
-
-        <div className="section-title">
+        <div className="section-head">
           <p>OUR SERVICES</p>
           <h2>Enterprise Solutions Built for Growth</h2>
         </div>
 
         <div className="service-grid">
+          {services.map((item, index) => (
+            <div className="service-card" key={index}>
+              <div className="service-icon">{item.icon}</div>
 
-          <div className="service-card">
-            <h3>Enterprise Software</h3>
-            <p>
-              ERP systems, CRM platforms, POS systems,
-              inventory management and automation.
-            </p>
-          </div>
+              <h3>{item.title}</h3>
 
-          <div className="service-card">
-            <h3>AI & Automation</h3>
-            <p>
-              AI chatbots, analytics, workflows and
-              enterprise automation systems.
-            </p>
-          </div>
-
-          <div className="service-card">
-            <h3>Web & Mobile Apps</h3>
-            <p>
-              Modern websites, Android apps,
-              iOS apps and SaaS platforms.
-            </p>
-          </div>
-
-          <div className="service-card">
-            <h3>Cloud Infrastructure</h3>
-            <p>
-              AWS deployment, DevOps solutions and
-              scalable cloud management.
-            </p>
-          </div>
-
+              <p>{item.desc}</p>
+            </div>
+          ))}
         </div>
-
       </section>
 
       {/* INDUSTRIES */}
       <section className="industries" id="industries">
-
-        <div className="section-title">
+        <div className="section-head">
           <p>INDUSTRIES</p>
           <h2>Industries We Serve</h2>
         </div>
 
         <div className="industry-grid">
-
-          <div className="industry-card">🏨 Hospitality</div>
-          <div className="industry-card">❤️ Healthcare</div>
-          <div className="industry-card">🛍 Retail & Fashion</div>
-          <div className="industry-card">⛽ Oil & Gas</div>
-          <div className="industry-card">🏦 Banking & Finance</div>
-          <div className="industry-card">📡 Telecommunications</div>
-          <div className="industry-card">🏢 Real Estate</div>
-          <div className="industry-card">🚚 Supply Chain & Logistics</div>
-          <div className="industry-card">🛒 E-Commerce</div>
-
+          {industries.map((item, index) => (
+            <div className="industry-card" key={index}>
+              {item.icon}
+              <span>{item.name}</span>
+            </div>
+          ))}
         </div>
-
       </section>
 
-      {/* CONTACT */}
-      <section className="contact" id="contact">
-
-        <div className="contact-box">
-
+      {/* CONTACT CTA */}
+      <section className="contact-cta">
+        <div className="cta-box">
           <p>CONTACT US</p>
 
           <h2>Let’s Build Something Amazing</h2>
 
-          <span>
-            Contact Webify Digital Solutions for enterprise software,
-            AI systems, mobile apps and digital transformation services.
-          </span>
+          <p className="cta-text">
+            Contact Webify Digital Solutions for enterprise
+            software, AI systems, mobile applications, cloud
+            infrastructure and digital transformation services.
+          </p>
 
-          <form
-            action="https://formsubmit.co/webifydigitalsolutions.com@gmail.com"
-            method="POST"
-          >
+          <div className="cta-buttons">
+            <a href="/contact.html" className="btn primary">
+              Contact Now
+            </a>
 
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              required
-            />
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
-
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows="5"
-              required
-            ></textarea>
-
-            <button type="submit">
-              Send Message
-            </button>
-
-          </form>
-
+            <a
+              href="https://wa.me/7032541775"
+              className="btn whatsapp"
+            >
+              WhatsApp Consultation
+            </a>
+          </div>
         </div>
-
       </section>
 
       {/* FOOTER */}
-      <footer>
-        © 2026 WEBIFY DIGITAL SOLUTIONS. All Rights Reserved.
-      </footer>
+      <footer className="footer">
+        <p>
+          © 2026 WEBIFY DIGITAL SOLUTIONS. All Rights Reserved.
+        </p>
 
+        <div className="socials">
+          <span>f</span>
+          <span>in</span>
+          <span>x</span>
+          <span>ig</span>
+        </div>
+      </footer>
     </div>
   );
 }
-
-export default App;
