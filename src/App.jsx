@@ -57,8 +57,7 @@ export default function App() {
     <div className="app">
       <header className="navbar">
         <div className="logo-box">
-          <img src="/Logo.png" alt="Logo" className="logo" />
-
+<img src="/Logo.png" alt="Logo" />
           <h2>
             <span>WEBIFY</span> DIGITAL SOLUTIONS
           </h2>
