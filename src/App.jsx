@@ -104,6 +104,70 @@ function App() {
         </div>
       </section>
 
+{/* ABOUT SECTION */}
+<section className="about-section" id="about">
+  <div className="about-container">
+
+    <div className="about-left">
+      <span className="section-tag">ABOUT US</span>
+
+      <h2>
+        Innovative Digital Solutions
+        <span> For Modern Businesses</span>
+      </h2>
+
+      <p>
+        WEBIFY DIGITAL SOLUTIONS is a next-generation technology company
+        delivering enterprise software, AI automation, cloud infrastructure,
+        mobile applications, and scalable digital transformation solutions.
+      </p>
+
+      <p>
+        We help startups, hospitals, retail businesses, educational
+        institutions, and enterprises build powerful digital ecosystems
+        that improve growth, efficiency, and customer experience.
+      </p>
+
+      <div className="about-stats">
+
+        <div>
+          <h3>50+</h3>
+          <p>Projects Completed</p>
+        </div>
+
+        <div>
+          <h3>10+</h3>
+          <p>Industries Served</p>
+        </div>
+
+        <div>
+          <h3>24/7</h3>
+          <p>Support Available</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div className="about-right">
+
+      <div className="about-card">
+
+        <img src="/Logo.png" alt="Logo" />
+
+        <h3>WEBIFY DIGITAL SOLUTIONS</h3>
+
+        <p>
+          Building futuristic websites, AI systems, mobile apps,
+          enterprise software and cloud platforms for modern businesses.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
       {/* SERVICES */}
       <section className="section" id="services">
 
