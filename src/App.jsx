@@ -317,7 +317,7 @@ function App() {
             </a>
 
             <a
-              href="https://wa.me/919390562015"
+              href="https://wa.me/917032541775"
               className="whatsapp-btn"
             >
               WhatsApp Consultation
