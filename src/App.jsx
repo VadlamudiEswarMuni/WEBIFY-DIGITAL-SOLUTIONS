@@ -7,8 +7,8 @@ function App() {
       {/* NAVBAR */}
       <header className="navbar">
         <div className="logo">
-          <img
-            src="https://i.imgur.com/7b1H6tB.png"
+           <img
+            src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
             alt="logo"
           />
           <h2>WEBIFY DIGITAL SOLUTIONS</h2>
